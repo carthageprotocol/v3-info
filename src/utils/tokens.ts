@@ -35,6 +35,9 @@ export function formatTokenSymbol(address: string, symbol: string, activeNetwork
   if (address === '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270' && activeNetwork === PolygonNetworkInfo) {
     return 'MATIC'
   }
+  if (address === '0x85FA00f55492B0437b3925381fAaf0E024747627' && activeNetwork === CandleNetworkInfo) {
+    return 'CNDL'
+  }
 
   if (WETH_ADDRESSES.includes(address)) {
     return 'ETH'
@@ -46,6 +49,9 @@ export function formatTokenName(address: string, name: string, activeNetwork?: N
   // dumb catch for matic
   if (address === '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270' && activeNetwork === PolygonNetworkInfo) {
     return 'MATIC'
+  }
+  if (address === '0x85FA00f55492B0437b3925381fAaf0E024747627' && activeNetwork === CandleNetworkInfo) {
+    return 'CNDL'
   }
 
   if (WETH_ADDRESSES.includes(address)) {

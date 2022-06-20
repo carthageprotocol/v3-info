@@ -40,6 +40,8 @@ export function getEtherscanLink(
   const prefix =
     networkVersion === PolygonNetworkInfo
       ? 'https://polygonscan.com/'
+    networkVersion === CandleNetworkInfo
+      ? 'https://candleexplorer.com/'
       : networkVersion === ArbitrumNetworkInfo
       ? 'https://arbiscan.io/'
       : networkVersion === OptimismNetworkInfo
