@@ -26,14 +26,14 @@ export const POOLS_BULK = (block: number | undefined, pools: string[]) => {
         tick
         token0 {
             id
-            symbol 
+            symbol
             name
             decimals
             derivedETH
         }
         token1 {
             id
-            symbol 
+            symbol
             name
             decimals
             derivedETH
@@ -87,7 +87,9 @@ interface PoolDataResponse {
 /**
  * Fetch top addresses by volume
  */
-export function usePoolDatas(poolAddresses: string[]): {
+export function usePoolDatas(
+  poolAddresses: string[]
+): {
   loading: boolean
   error: boolean
   data:
@@ -109,11 +111,9 @@ export function usePoolDatas(poolAddresses: string[]): {
     client: dataClient,
   })
 
-  const {
-    loading: loading24,
-    error: error24,
-    data: data24,
-  } = useQuery<PoolDataResponse>(POOLS_BULK(block24?.number, poolAddresses), { client: dataClient })
+  const { loading: loading24, error: error24, data: data24 } = useQuery<PoolDataResponse>(
+    POOLS_BULK(block24?.number, poolAddresses),
+    { client: dataClient })
   const {
     loading: loading48,
     error: error48,
