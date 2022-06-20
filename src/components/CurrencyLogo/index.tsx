@@ -64,7 +64,7 @@ export default function CurrencyLogo({
   }, [checkSummed, arbitrumList])
   const uriLocationsArbitrum = useHttpLocations(arbitrumURI)
 
- const polygonURI = useMemo(() => {
+  const polygonURI = useMemo(() => {
     if (checkSummed && polygon?.[checkSummed]) {
       return polygon?.[checkSummed].token.logoURI
     }
@@ -72,13 +72,13 @@ export default function CurrencyLogo({
   }, [checkSummed, polygon])
   const uriLocationsPolygon = useHttpLocations(polygonURI)
 
- const candleURI = useMemo(() => {
-      if (checkSummed && candle?.[checkSummed]) {
-        return candle?.[checkSummed].token.logoURI
-      }
-      return undefined
-    }, [checkSummed, candle])
-    const uriLocationsCandle = useHttpLocations(candleURI)
+  const candleURI = useMemo(() => {
+    if (checkSummed && candle?.[checkSummed]) {
+      return candle?.[checkSummed].token.logoURI
+    }
+    return undefined
+  }, [checkSummed, candle])
+  const uriLocationsCandle = useHttpLocations(candleURI)
 
   //temp until token logo issue merged
   const tempSources: { [address: string]: string } = useMemo(() => {
