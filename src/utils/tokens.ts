@@ -1,5 +1,5 @@
 import { Token } from '@uniswap/sdk-core'
-import { NetworkInfo, PolygonNetworkInfo } from 'constants/networks'
+import { NetworkInfo, PolygonNetworkInfo, CandleNetworkInfo } from 'constants/networks'
 import { WETH_ADDRESSES } from '../constants/index'
 
 export interface SerializedToken {
