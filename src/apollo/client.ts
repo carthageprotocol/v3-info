@@ -178,7 +178,7 @@ export const polygonBlockClient = new ApolloClient({
 })
 
 export const candleClient = new ApolloClient({
-  uri: 'http://18.206.149.226:8000/subgraphs/name/ianlapham/uniswap-v3',
+  uri: ' http://18.206.149.226:8000/subgraphs/name/ianlapham/uniswap-v3/graphql',
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
@@ -206,7 +206,7 @@ export const candleClient = new ApolloClient({
 })
 
 export const candleBlockClient = new ApolloClient({
-  uri: 'http://18.206.149.226:8000/subgraphs/name/ianlapham/uniswap-v3',
+  uri: ' http://18.206.149.226:8000/subgraphs/name/ianlapham/uniswap-v3/graphql',
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
