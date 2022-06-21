@@ -18,9 +18,9 @@ type ChainTokenList = {
   readonly [chainId: number]: Token[]
 }
 
-export const WETH_ADDRESS = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
+export const WETH_ADDRESS = '0xb750990F953B36F806d0327678eCFB4eEFd16979'
 
-export const WETH_ADDRESSES = [WETH_ADDRESS, '0x82af49447d8a07e3bd95bd0d56f35241523fbab1']
+export const WETH_ADDRESSES = [WETH_ADDRESS, '0xb750990F953B36F806d0327678eCFB4eEFd16979']
 
 // Block time here is slightly higher (~1s) than average in order to avoid ongoing proposals past the displayed time
 export const AVERAGE_BLOCK_TIME_IN_SECS = 13
