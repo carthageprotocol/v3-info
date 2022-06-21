@@ -1,4 +1,4 @@
-import { Token } from '@uniswap/sdk-core'
+import { Token } from '@cndllabs/sdk-core'
 import { NetworkInfo, PolygonNetworkInfo, CandleNetworkInfo } from 'constants/networks'
 import { WETH_ADDRESSES } from '../constants/index'
 
