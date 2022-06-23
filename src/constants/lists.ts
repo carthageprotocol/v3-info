@@ -3,7 +3,7 @@
 export const UNSUPPORTED_LIST_URLS: string[] = []
 export const OPTIMISM_LIST = 'https://static.optimism.io/optimism.tokenlist.json'
 export const ARBITRUM_LIST = 'https://bridge.arbitrum.io/token-list-42161.json'
-export const CANDLE_LIST = 'https://raw.githubusercontent.com/WLKR-Financial/tokenlist/main/wlkrverified.tokenlist.json' //Added Candle 2022/06/06 - Updated 2022/06/20 to correct link S.W.S.
+export const CANDLE_LIST = 'https://raw.githubusercontent.com/carthageprotocol/token-lists/main/carthage.tokenlist.json' //Added Candle 2022/06/06 - Updated 2022/06/20 to correct link S.W.S. - reverted this change seven minutes after S.W.S
 export const POLYGON_LIST =
   'https://unpkg.com/quickswap-default-token-list@1.2.2/build/quickswap-default.tokenlist.json'
 
