@@ -139,7 +139,7 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
     case SupportedNetwork.POLYGON:
       return polygonClient
     default:
-      return client
+      return candleClient
   }
 }
 
@@ -158,7 +158,7 @@ export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
     case SupportedNetwork.POLYGON:
       return polygonBlockClient
     default:
-      return blockClient
+      return candleBlockClient
   }
 }
 
