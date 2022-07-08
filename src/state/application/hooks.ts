@@ -128,10 +128,10 @@ export function useActiveNetworkVersion(): [NetworkInfo, (activeNetworkVersion: 
 export function useDataClient(): ApolloClient<NormalizedCacheObject> {
   const [activeNetwork] = useActiveNetworkVersion()
   switch (activeNetwork.id) {
-    case SupportedNetwork.ETHEREUM:
-      return client
     case SupportedNetwork.CANDLE:
       return candleClient
+    case SupportedNetwork.ETHEREUM:
+      return client
     case SupportedNetwork.ARBITRUM:
       return arbitrumClient
     case SupportedNetwork.OPTIMISM:
@@ -147,10 +147,10 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
 export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
   const [activeNetwork] = useActiveNetworkVersion()
   switch (activeNetwork.id) {
-    case SupportedNetwork.ETHEREUM:
-      return blockClient
     case SupportedNetwork.CANDLE:
       return candleBlockClient
+    case SupportedNetwork.ETHEREUM:
+      return blockClient
     case SupportedNetwork.ARBITRUM:
       return arbitrumBlockClient
     case SupportedNetwork.OPTIMISM:
