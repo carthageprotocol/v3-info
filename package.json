@@ -1,6 +1,6 @@
 {
   "name": "@uniswap/interface",
-  "description": "Carthage Interface",
+  "description": "Uniswap Interface",
   "homepage": ".",
   "private": true,
   "devDependencies": {

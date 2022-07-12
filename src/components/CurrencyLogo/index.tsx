@@ -96,14 +96,14 @@ export default function CurrencyLogo({
       return [
         getTokenLogoURL(checkSummed),
         ...uriLocationsOptimism,
-        ...uriLocationsCandle,
         ...uriLocationsArbitrum,
         ...uriLocationsPolygon,
+        ...uriLocationsCandle,
         override,
       ]
     }
     return []
-  }, [address, tempSources, uriLocationsArbitrum, uriLocationsOptimism, uriLocationsCandle, uriLocationsPolygon])
+  }, [address, tempSources, uriLocationsArbitrum, uriLocationsOptimism, uriLocationsPolygon, uriLocationsCandle])
 
   if (activeNetwork === OptimismNetworkInfo && address === '0x4200000000000000000000000000000000000006') {
     return <StyledEthereumLogo src={EthereumLogo} size={size} style={style} {...rest} />

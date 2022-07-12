@@ -2,7 +2,7 @@ import gql from 'graphql-tag'
 import JSBI from 'jsbi'
 import keyBy from 'lodash.keyby'
 import { TickMath, tickToPrice } from '@uniswap/v3-sdk'
-import { Token } from '@cndllabs/sdk-core'
+import { Token } from '@uniswap/sdk-core'
 import { ApolloClient, NormalizedCacheObject } from '@apollo/client'
 
 const PRICE_FIXED_DIGITS = 4
@@ -164,11 +164,7 @@ export const fetchTicksSurroundingPrice = async (
   error?: boolean
   data?: PoolTickData
 }> => {
-  const {
-    data: poolResult,
-    error,
-    loading,
-  } = await client.query<PoolResult>({
+  const { data: poolResult, error, loading } = await client.query<PoolResult>({
     query: poolQuery,
     variables: {
       poolAddress,

@@ -55,11 +55,7 @@ async function fetchChartData(client: ApolloClient<NormalizedCacheObject>) {
 
   try {
     while (!allFound) {
-      const {
-        data: chartResData,
-        error,
-        loading,
-      } = await client.query<ChartResults>({
+      const { data: chartResData, error, loading } = await client.query<ChartResults>({
         query: GLOBAL_CHART,
         variables: {
           startTime: startTimestamp,

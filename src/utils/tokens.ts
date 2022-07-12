@@ -1,6 +1,6 @@
 import { Token } from '@cndllabs/sdk-core'
-import { NetworkInfo, PolygonNetworkInfo, CandleNetworkInfo } from 'constants/networks'
-import { WETH_ADDRESSES } from '../constants/index'
+import { CandleNetworkInfo, NetworkInfo, PolygonNetworkInfo } from 'constants/networks'
+import { CNDL_ADDRESS, MATIC_ADDRESS, WETH_ADDRESSES } from '../constants'
 
 export interface SerializedToken {
   chainId: number
@@ -20,22 +20,14 @@ export function serializeToken(token: Token): SerializedToken {
   }
 }
 
-export function deserializeToken(serializedToken: SerializedToken): Token {
-  return new Token(
-    serializedToken.chainId,
-    serializedToken.address,
-    serializedToken.decimals,
-    serializedToken.symbol,
-    serializedToken.name
-  )
-}
-
 export function formatTokenSymbol(address: string, symbol: string, activeNetwork?: NetworkInfo) {
   // dumb catch for matic
-  if (address === '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270' && activeNetwork === PolygonNetworkInfo) {
+  if (address === MATIC_ADDRESS && activeNetwork === PolygonNetworkInfo) {
     return 'MATIC'
   }
-  if (address === '0x85FA00f55492B0437b3925381fAaf0E024747627' && activeNetwork === CandleNetworkInfo) {
+
+  // dumb catch for Candle
+  if (address === CNDL_ADDRESS && activeNetwork === CandleNetworkInfo) {
     return 'CNDL'
   }
 
@@ -47,10 +39,12 @@ export function formatTokenSymbol(address: string, symbol: string, activeNetwork
 
 export function formatTokenName(address: string, name: string, activeNetwork?: NetworkInfo) {
   // dumb catch for matic
-  if (address === '0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270' && activeNetwork === PolygonNetworkInfo) {
+  if (address === MATIC_ADDRESS && activeNetwork === PolygonNetworkInfo) {
     return 'MATIC'
   }
-  if (address === '0x85FA00f55492B0437b3925381fAaf0E024747627' && activeNetwork === CandleNetworkInfo) {
+
+  // dumb catch for Candle
+  if (address === CNDL_ADDRESS && activeNetwork === CandleNetworkInfo) {
     return 'CNDL'
   }
 

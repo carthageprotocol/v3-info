@@ -3,16 +3,16 @@
 export const UNSUPPORTED_LIST_URLS: string[] = []
 export const OPTIMISM_LIST = 'https://static.optimism.io/optimism.tokenlist.json'
 export const ARBITRUM_LIST = 'https://bridge.arbitrum.io/token-list-42161.json'
-export const CANDLE_LIST = 'https://raw.githubusercontent.com/carthageprotocol/token-lists/main/carthage.tokenlist.json' //Added Candle 2022/06/06 - Updated 2022/06/20 to correct link S.W.S. - reverted this change seven minutes after S.W.S
 export const POLYGON_LIST =
   'https://unpkg.com/quickswap-default-token-list@1.2.2/build/quickswap-default.tokenlist.json'
+export const CANDLE_LIST = 'https://raw.githubusercontent.com/carthageprotocol/token-lists/main/carthage.tokenlist.json'
 
 // lower index == higher priority for token import
 export const DEFAULT_LIST_OF_LISTS: string[] = [
   OPTIMISM_LIST,
-  CANDLE_LIST, // Added Candle 2022/06/06
   ARBITRUM_LIST,
   POLYGON_LIST,
+  CANDLE_LIST,
   ...UNSUPPORTED_LIST_URLS, // need to load unsupported tokens as well
 ]
 

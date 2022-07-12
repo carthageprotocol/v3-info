@@ -8,8 +8,8 @@ import {
   optimismBlockClient,
   polygonBlockClient,
   polygonClient,
-  candleBlockClient,
   candleClient,
+  candleBlockClient,
 } from 'apollo/client'
 import { NetworkInfo, SupportedNetwork } from 'constants/networks'
 import { useCallback, useMemo } from 'react'
@@ -128,8 +128,6 @@ export function useActiveNetworkVersion(): [NetworkInfo, (activeNetworkVersion: 
 export function useDataClient(): ApolloClient<NormalizedCacheObject> {
   const [activeNetwork] = useActiveNetworkVersion()
   switch (activeNetwork.id) {
-    case SupportedNetwork.CANDLE:
-      return candleClient
     case SupportedNetwork.ETHEREUM:
       return client
     case SupportedNetwork.ARBITRUM:
@@ -138,8 +136,10 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
       return optimismClient
     case SupportedNetwork.POLYGON:
       return polygonClient
-    default:
+    case SupportedNetwork.CANDLE:
       return candleClient
+    default:
+      return client
   }
 }
 
@@ -147,8 +147,6 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
 export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
   const [activeNetwork] = useActiveNetworkVersion()
   switch (activeNetwork.id) {
-    case SupportedNetwork.CANDLE:
-      return candleBlockClient
     case SupportedNetwork.ETHEREUM:
       return blockClient
     case SupportedNetwork.ARBITRUM:
@@ -157,8 +155,10 @@ export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
       return optimismBlockClient
     case SupportedNetwork.POLYGON:
       return polygonBlockClient
-    default:
+    case SupportedNetwork.CANDLE:
       return candleBlockClient
+    default:
+      return blockClient
   }
 }
 

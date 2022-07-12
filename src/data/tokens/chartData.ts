@@ -41,7 +41,7 @@ export async function fetchTokenChartData(address: string, client: ApolloClient<
     volumeUSD: string
     totalValueLockedUSD: string
   }[] = []
-  const startTimestamp = 161
+  const startTimestamp = 1619170975
   const endTimestamp = dayjs.utc().unix()
 
   let error = false
@@ -50,11 +50,7 @@ export async function fetchTokenChartData(address: string, client: ApolloClient<
 
   try {
     while (!allFound) {
-      const {
-        data: chartResData,
-        error,
-        loading,
-      } = await client.query<ChartResults>({
+      const { data: chartResData, error, loading } = await client.query<ChartResults>({
         query: TOKEN_CHART,
         variables: {
           address: address,

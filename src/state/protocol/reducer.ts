@@ -34,12 +34,6 @@ export interface ProtocolState {
 }
 
 export const initialState: ProtocolState = {
-  [SupportedNetwork.CANDLE]: {
-    data: undefined,
-    chartData: undefined,
-    transactions: undefined,
-    lastUpdated: undefined,
-  },
   [SupportedNetwork.ETHEREUM]: {
     data: undefined,
     chartData: undefined,
@@ -59,6 +53,12 @@ export const initialState: ProtocolState = {
     lastUpdated: undefined,
   },
   [SupportedNetwork.POLYGON]: {
+    data: undefined,
+    chartData: undefined,
+    transactions: undefined,
+    lastUpdated: undefined,
+  },
+  [SupportedNetwork.CANDLE]: {
     data: undefined,
     chartData: undefined,
     transactions: undefined,

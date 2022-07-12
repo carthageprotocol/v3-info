@@ -119,11 +119,7 @@ export async function fetchTokenPriceData(
     let skip = 0
     let allFound = false
     while (!allFound) {
-      const {
-        data: priceData,
-        errors,
-        loading,
-      } = await dataClient.query<PriceResults>({
+      const { data: priceData, errors, loading } = await dataClient.query<PriceResults>({
         query: PRICE_CHART,
         variables: {
           address: address,

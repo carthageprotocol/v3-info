@@ -26,14 +26,14 @@ export const POOLS_BULK = (block: number | undefined, pools: string[]) => {
         tick
         token0 {
             id
-            symbol
+            symbol 
             name
             decimals
             derivedETH
         }
         token1 {
             id
-            symbol
+            symbol 
             name
             decimals
             derivedETH
@@ -113,17 +113,16 @@ export function usePoolDatas(
 
   const { loading: loading24, error: error24, data: data24 } = useQuery<PoolDataResponse>(
     POOLS_BULK(block24?.number, poolAddresses),
-    { client: dataClient })
-  const {
-    loading: loading48,
-    error: error48,
-    data: data48,
-  } = useQuery<PoolDataResponse>(POOLS_BULK(block48?.number, poolAddresses), { client: dataClient })
-  const {
-    loading: loadingWeek,
-    error: errorWeek,
-    data: dataWeek,
-  } = useQuery<PoolDataResponse>(POOLS_BULK(blockWeek?.number, poolAddresses), { client: dataClient })
+    { client: dataClient }
+  )
+  const { loading: loading48, error: error48, data: data48 } = useQuery<PoolDataResponse>(
+    POOLS_BULK(block48?.number, poolAddresses),
+    { client: dataClient }
+  )
+  const { loading: loadingWeek, error: errorWeek, data: dataWeek } = useQuery<PoolDataResponse>(
+    POOLS_BULK(blockWeek?.number, poolAddresses),
+    { client: dataClient }
+  )
 
   const anyError = Boolean(error || error24 || error48 || blockError || errorWeek)
   const anyLoading = Boolean(loading || loading24 || loading48 || loadingWeek)

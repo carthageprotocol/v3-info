@@ -1,6 +1,6 @@
-Carthage---
+---
 name: Bug Report
-about: Describe an issue in the Carthage Interface
+about: Describe an issue in the Uniswap Interface
 title: ''
 labels: bug
 assignees: ''

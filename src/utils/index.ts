@@ -3,14 +3,12 @@ import { BigNumber } from '@ethersproject/bignumber'
 import { AddressZero } from '@ethersproject/constants'
 import { Contract } from '@ethersproject/contracts'
 import { JsonRpcSigner, Web3Provider } from '@ethersproject/providers'
-import { Currency, CurrencyAmount, Fraction, Percent, Token } from '@cndllabs/sdk-core'
-import { abi as IUniswapV2Router02ABI } from '@uniswap/v2-periphery/build/IUniswapV2Router02.json'
+import { Currency, CurrencyAmount, Fraction, Percent, Token } from '@uniswap/sdk-core'
 import { SupportedChainId } from 'constants/chains'
-import { ArbitrumNetworkInfo, NetworkInfo, PolygonNetworkInfo, CandleNetworkInfo } from 'constants/networks'
+import { ArbitrumNetworkInfo, CandleNetworkInfo, NetworkInfo, PolygonNetworkInfo } from 'constants/networks'
 import JSBI from 'jsbi'
-import { ROUTER_ADDRESS } from '../constants'
 import { TokenAddressMap } from '../state/lists/hooks'
-import { OptimismNetworkInfo } from './../constants/networks'
+import { OptimismNetworkInfo } from '../constants/networks'
 
 // returns the checksummed address if the address is valid, otherwise returns false
 export function isAddress(value: any): string | false {
@@ -41,7 +39,7 @@ export function getEtherscanLink(
     networkVersion === PolygonNetworkInfo
       ? 'https://polygonscan.com/'
       : networkVersion === CandleNetworkInfo
-      ? 'https://candleexplorer.com/'
+      ? 'https://candleexplorer.com'
       : networkVersion === ArbitrumNetworkInfo
       ? 'https://arbiscan.io/'
       : networkVersion === OptimismNetworkInfo
@@ -144,11 +142,6 @@ export function getContract(address: string, ABI: any, library: Web3Provider, ac
   }
 
   return new Contract(address, ABI, getProviderOrSigner(library, account) as any)
-}
-
-// account is optional
-export function getRouterContract(_: number, library: Web3Provider, account?: string): Contract {
-  return getContract(ROUTER_ADDRESS, IUniswapV2Router02ABI, library, account)
 }
 
 export function escapeRegExp(string: string): string {
