@@ -2,7 +2,7 @@ import OPTIMISM_LOGO_URL from '../assets/images/optimism.svg'
 import ARBITRUM_LOGO_URL from '../assets/images/arbitrum.svg'
 import ETHEREUM_LOGO_URL from '../assets/images/ethereum-logo.png'
 import POLYGON_LOGO_URL from '../assets/images/polygon-logo.png'
-import CANDLE_LOGO_URL from '../assets/images/celo-logo.svg'
+import CANDLE_LOGO_URL from '../assets/images/candle-logo.svg'
 
 export enum SupportedNetwork {
   ETHEREUM,
