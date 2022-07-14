@@ -1,6 +1,6 @@
 import { Contract } from '@ethersproject/contracts'
-import { WETH9 } from '@uniswap/sdk-core'
-import { abi as IUniswapV2PairABI } from '@uniswap/v2-core/build/IUniswapV2Pair.json'
+import { WETH9 } from '@cndllabs/sdk-core'
+import { abi as IUniswapV2PairABI } from '@cndllabs/v2-core/build/IUniswapV2Pair.json'
 import { SupportedChainId } from 'constants/chains'
 import { useMemo } from 'react'
 
