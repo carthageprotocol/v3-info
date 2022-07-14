@@ -1218,6 +1218,11 @@
     tiny-invariant "^1.1.0"
     toformat "^2.0.0"
 
+"@cndllabs/v2-core@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@cndllabs/v2-core/-/v2-core-1.0.2.tgz#11a00448471f0ad16fa0e9b0cbf717366374ec70"
+  integrity sha512-P+sM3wDiyfacf7FpMvEEDmza81dBLwlKyiANMea1FNuAqosW7DbtAgR/ceDvC0VA2f2geh7ZdA7Qe+aDcmTddA==
+
 "@cndllabs/v3-sdk@^3.8.2":
   version "3.8.2"
   resolved "https://registry.yarnpkg.com/@cndllabs/v3-sdk/-/v3-sdk-3.8.2.tgz#ae4d7afa957b035922fb71e8d347d6cc34f85313"
