@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 
 export const healthClient = new ApolloClient({
-  uri: 'https://thegraph.cndlchain.com/index-node/graphql',
+  uri: 'https://api.thegraph.com/index-node/graphql',
   cache: new InMemoryCache(),
 })
 
