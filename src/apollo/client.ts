@@ -178,7 +178,7 @@ export const polygonBlockClient = new ApolloClient({
 })
 
 export const candleClient = new ApolloClient({
-  uri: 'https://thegraph.cndlchain.com/subgraphs/name/ianlapham/uniswap-v3-test',
+  uri: 'https://thegraph.cndlchain.com/subgraphs/name/ianlapham/uniswap-v3',
   cache: new InMemoryCache({
     typePolicies: {
       Token: {
